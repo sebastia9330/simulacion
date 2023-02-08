@@ -6,11 +6,15 @@
 */
 function crearClasePersona() {
   class Persona {
-    constructor(nombre, edad, hobbies, amigos) {
+    constructor(nombre = "", edad = 0, hobbies = [""], amigos = [{}]) {
       // El constructor de la clase Persona recibe nombre (string), edad (integer), hobbies (array de strings), amigos (array de objetos)
       // Inicializar las propiedades de la persona con los valores recibidos como argumento
 
       // Tu código aca:
+      this.nombre = nombre;
+      this.edad = edad;
+      this.hobbies = hobbies;
+      this.amigos = amigos;
 
     }
 
@@ -20,6 +24,7 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
+      this.push({nombre,edad})
 
     }
 
