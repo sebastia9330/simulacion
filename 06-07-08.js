@@ -6,7 +6,7 @@
 */
 function crearClasePersona() {
   class Persona {
-    constructor(nombre = "", edad = 0, hobbies = [""], amigos = [{}]) {
+    constructor(nombre, edad, hobbies, amigos) {
       // El constructor de la clase Persona recibe nombre (string), edad (integer), hobbies (array de strings), amigos (array de objetos)
       // Inicializar las propiedades de la persona con los valores recibidos como argumento
 
@@ -24,7 +24,7 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
-      this.push({nombre,edad})
+      this.amigos.push({nombre, edad});
 
     }
 
@@ -33,6 +33,7 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
+      this.hobbies.push(hobby)
 
     }
     getFriends() {
@@ -43,7 +44,10 @@ function crearClasePersona() {
       // persona.getFriends() debería devolver ['martin', 'toni']
 
       // Tu código aca:
-
+      var nombreamigos = this.amigos.map(function(current){
+        return current.nombre
+      })
+      return nombreamigos
     }
 
     getHobbies() {
@@ -52,7 +56,10 @@ function crearClasePersona() {
       // persona.getHobbies() debe devolver ['correr', 'dormir', 'nadar']
 
       // Tu código aca:
-
+      var todosloshobbies = this.hobbies.map(function(current){
+        return current
+      })
+      return todosloshobbies
     }
 
     getPromedioEdad() {
