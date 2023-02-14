@@ -24,6 +24,13 @@ function filtrar(funcion) {
   // productos.filtrar(function(p) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
+  Array.prototype.filtrar = function (callback) {
+    var newarr=[]
+    for (let elemento of this){
+      if(callback(elemento)) newarr.push(elemento)
+    }
+    return newarr
+  }
 
 };
 
